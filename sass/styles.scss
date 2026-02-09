@@ -1,0 +1,316 @@
+@use 'variables';
+@use 'btn';
+
+body {
+    font-family: 'Roboto', sans-serif;
+
+    header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 100;
+
+        .navbar {
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: box-shadow 0.3s ease-in-out;
+
+            .navbar-brand {
+                font-weight: bold;
+                font-size: 2rem;
+                color: variables.$primary;
+                font-family: 'Sansation', sans-serif;
+            }
+
+            .navbar-brand:hover {
+                color: variables.$primary-dark;
+            }
+
+            ul {
+                list-style: none;
+
+                .nav-link {
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 1.25rem;
+                    color: variables.$primary-dark;
+                    font-weight: bold;
+                }
+
+                .nav-link:hover {
+                    color: variables.$primary;
+                }
+            }
+        }
+    }
+
+    #main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 95vh;
+        gap: 20px;
+        color: whitesmoke;
+        background-image: linear-gradient(0deg,
+                rgba(0, 0, 0, 0.7),
+                rgba(0, 0, 0, 0.7)), url(../img/bg-main.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+        h1 {
+            font-family: 'Sansation', sans-serif;
+            font-size: 7rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+
+            @media (max-width: 768px) {
+                font-size: 3.5rem;
+                margin: 10px;
+            }
+        }
+    }
+
+    #somos-academy {
+        background-color: variables.$bg-light;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+
+        .container-academy {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .img-container {
+                background-image: linear-gradient(0deg,
+                        rgba(0, 0, 0, 0.1),
+                        rgba(0, 0, 0, 0.1)), url(../img/play-pkm-img.png);
+                background-size: cover;
+                background-position: center center;
+                height: 500px;
+                width: 400px;
+
+                @media (max-width: 960px) {
+                    display: none;
+                }
+            }
+
+            .academy-texto {
+                h2 {
+                    font-family: 'Sansation', sans-serif;
+                    font-size: 3rem;
+                    font-weight: bold;
+                }
+
+                .color-somos {
+                    color: variables.$primary;
+                }
+
+                p{
+                    font-size: 1.25rem;
+
+                    @media (max-width: 960px) {
+                        text-align: center;
+                        font-size: 1rem;
+                    }
+                }
+
+                width: 50%;
+                text-align: initial;
+                padding: 0px 40px;
+
+                @media (max-width: 960px) {
+                    width: 100%;
+                    padding: 30px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    #somos-ofrecemos {
+        background-color: variables.$bg-dark;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+
+        .container-ofrecemos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .ofrecemos-texto {
+                width: 50%;
+                text-align: initial;
+                padding: 0px 40px;
+                color: whitesmoke;
+                font-size: 1.25rem;
+
+                @media (max-width: 960px) {
+                    width: 100%;
+                    padding: 30px;
+                    text-align: center;
+                    font-size: 1rem;
+                }
+            }
+
+            .ofrecemos-img {
+                background-image: linear-gradient(0deg,
+                        rgba(0, 0, 0, 0.2),
+                        rgba(0, 0, 0, 0.2)), url(../img/pkm-Academy-img.png);
+                background-size: cover;
+                background-position: center center;
+                height: 500px;
+                width: 400px;
+
+                @media (max-width: 960px) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    #nuestros-programas {
+        background-color: variables.$bg-dark;
+        color: white;
+        text-align: center;
+        padding: 50px 20px;
+        gap: 20px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: 960px) {
+            height: auto;
+        }
+
+        h2 {
+            font-family: 'Sansation', sans-serif;
+            font-size: 3rem;
+            font-weight: bold;
+            margin-top: 100px;
+        }
+
+        .container-card {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            @media (max-width: 960px) {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                margin-top: 30px;
+                background-color: rgb(54, 51, 51);
+                color: white;
+                border-radius: 20px;
+
+                .card-body {
+                    h5 {
+                        font-weight: bold;
+                        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
+                    }
+
+                    p {
+                        font-size: 1rem;
+
+                        @media (max-width: 960px) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #caracteristicas {
+        .container-caracteristicas {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 20px;
+            gap: 20px;
+            height: 100vh;
+            background-color: variables.$bg-light;
+
+            ul {
+                list-style: circle;
+                font-weight: bold;
+                font-size: 2rem;
+                color: black;
+            }
+        }
+    }
+
+    #ready {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 95vh;
+        background-color: variables.$bg-dark;
+        gap: 100px;
+
+        h2 {
+            font-family: 'Sansation', sans-serif;
+            font-size: 4rem;
+            color: whitesmoke;
+            font-weight: bold;
+
+            @media (max-width: 768px) {
+                font-size: 2.5rem;
+                margin: 20px;
+            }
+        }
+    }
+
+    #ready-somos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 95vh;
+        background-color: variables.$bg-light;
+        gap: 100px;
+
+        h2 {
+            font-family: 'Sansation', sans-serif;
+            font-size: 4rem;
+            color: black;
+            font-weight: bold;
+
+            @media (max-width: 768px) {
+                font-size: 2.5rem;
+                margin: 20px;
+            }
+        }
+    }
+
+    footer {
+        background-color: whitesmoke;
+
+        .container-footer {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            p {
+                font-size: 1.25rem;
+                color: variables.$primary-dark;
+                padding: 10px 10px;
+            }
+
+            @media (max-width: 768px) {
+                height: auto;
+                align-items: center;
+            }
+        }
+    }
+}
