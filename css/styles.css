@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 10px;
+  border: 1.5px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  background-color: rgb(206, 24, 30);
+  font-family: "Roboto", sans-serif;
+  transition: box-shadow 0.3s ease-in-out;
+}
+@media (max-width: 960px) {
+  .btn-primary {
+    font-size: 1.2rem;
+    padding: 5px 15px;
+  }
+}
+
+.btn-primary:hover {
+  background-color: rgb(160, 20, 25);
+  border-color: rgb(160, 20, 25);
+  transform: scale(1.05);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+body header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+body header .navbar {
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease-in-out;
+}
+body header .navbar .navbar-brand {
+  font-weight: bold;
+  font-size: 2rem;
+  color: rgb(206, 24, 30);
+  font-family: "Sansation", sans-serif;
+  transition: transform 0.3s ease-in-out;
+}
+body header .navbar .navbar-brand:hover {
+  color: rgb(160, 20, 25);
+  transform: scale(1.05);
+}
+body header .navbar ul {
+  list-style: none;
+}
+body header .navbar ul .nav-link {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
+  color: rgb(160, 20, 25);
+  font-weight: bold;
+}
+body header .navbar ul .nav-link:hover {
+  color: rgb(206, 24, 30);
+}
+body .whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+body .whatsapp img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+body .whatsapp img:hover {
+  transform: scale(1.2);
+}
+body .main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  gap: 20px;
+  color: whitesmoke;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../img/main-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+body .main h1 {
+  font-family: "Sansation", sans-serif;
+  font-size: 7rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+}
+@media (max-width: 960px) {
+  body .main h1 {
+    font-size: 3.5rem;
+    margin: 10px;
+  }
+}
+@media (max-width: 480px) {
+  body .main h1 {
+    font-size: 2.5rem;
+    margin: 10px;
+  }
+}
+body .somos-academy {
+  background-color: rgb(249, 255, 250);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+body .somos-academy .container-academy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .somos-academy .container-academy .img-container {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/play-pkm-img.png);
+  background-size: cover;
+  background-position: center center;
+  height: 500px;
+  width: 400px;
+}
+@media (max-width: 960px) {
+  body .somos-academy .container-academy .img-container {
+    display: none;
+  }
+}
+body .somos-academy .container-academy .academy-texto h2 {
+  font-family: "Sansation", sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+}
+body .somos-academy .container-academy .academy-texto .color-somos {
+  color: rgb(206, 24, 30);
+}
+body .somos-academy .container-academy .academy-texto p {
+  font-size: 1.25rem;
+}
+@media (max-width: 480px) {
+  body .somos-academy .container-academy .academy-texto p {
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+body .somos-academy .container-academy .academy-texto {
+  width: 50%;
+  text-align: initial;
+  padding: 0px 40px;
+}
+@media (max-width: 960px) {
+  body .somos-academy .container-academy .academy-texto {
+    width: 70%;
+    padding: 30px 10px;
+    text-align: center;
+  }
+}
+body .somos-ofrecemos {
+  background-color: rgb(15, 15, 15);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+body .somos-ofrecemos .container-ofrecemos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .somos-ofrecemos .container-ofrecemos .ofrecemos-texto {
+  width: 50%;
+  text-align: initial;
+  padding: 0px 40px;
+  color: whitesmoke;
+  font-size: 1.25rem;
+}
+@media (max-width: 960px) {
+  body .somos-ofrecemos .container-ofrecemos .ofrecemos-texto {
+    width: 70%;
+    padding: 30px;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  body .somos-ofrecemos .container-ofrecemos .ofrecemos-texto {
+    font-size: 1rem;
+  }
+}
+body .somos-ofrecemos .container-ofrecemos .ofrecemos-img {
+  background-image: url(../img/poke-ball.png);
+  background-size: cover;
+  background-position: center center;
+  height: 500px;
+  width: 500px;
+}
+@media (max-width: 960px) {
+  body .somos-ofrecemos .container-ofrecemos .ofrecemos-img {
+    display: none;
+  }
+}
+body .nuestros-programas {
+  background-color: rgb(15, 15, 15);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  gap: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 960px) {
+  body .nuestros-programas {
+    height: auto;
+  }
+}
+body .nuestros-programas h2 {
+  font-family: "Sansation", sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 100px;
+}
+body .nuestros-programas .container-card {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media (max-width: 960px) {
+  body .nuestros-programas .container-card {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+body .nuestros-programas .container-card .card {
+  margin-top: 30px;
+  background-color: rgb(54, 51, 51);
+  color: white;
+  border-radius: 20px;
+}
+body .nuestros-programas .container-card .card .card-body h5 {
+  font-weight: bold;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
+}
+body .nuestros-programas .container-card .card .card-body p {
+  font-size: 1rem;
+}
+@media (max-width: 960px) {
+  body .nuestros-programas .container-card .card .card-body p {
+    display: none;
+  }
+}
+body #caracteristicas .container-caracteristicas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  gap: 20px;
+  height: 100vh;
+  background-color: rgb(249, 255, 250);
+}
+body #caracteristicas .container-caracteristicas ul {
+  list-style: circle;
+  font-weight: bold;
+  font-size: 2rem;
+  color: black;
+}
+body .ready {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 95vh;
+  background-color: rgb(15, 15, 15);
+  gap: 100px;
+}
+body .ready h2 {
+  font-family: "Sansation", sans-serif;
+  font-size: 4rem;
+  color: whitesmoke;
+  font-weight: bold;
+}
+@media (max-width: 480px) {
+  body .ready h2 {
+    font-size: 2.5rem;
+    margin: 20px;
+  }
+}
+body .ready-somos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 95vh;
+  background-color: rgb(249, 255, 250);
+  gap: 100px;
+}
+body .ready-somos h2 {
+  font-family: "Sansation", sans-serif;
+  font-size: 4rem;
+  color: black;
+  font-weight: bold;
+}
+@media (max-width: 480px) {
+  body .ready-somos h2 {
+    font-size: 2.5rem;
+    margin: 20px;
+  }
+}
+body footer {
+  background-color: whitesmoke;
+}
+body footer .container-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+body footer .container-footer p {
+  font-size: 1.25rem;
+  color: rgb(160, 20, 25);
+  padding: 10px 10px;
+}
+@media (max-width: 480px) {
+  body footer .container-footer {
+    height: auto;
+    align-items: center;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
