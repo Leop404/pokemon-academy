@@ -1,5 +1,7 @@
+@use 'mediaqueries' as bp;
 @use 'variables';
 @use 'btn';
+
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -20,10 +22,12 @@ body {
                 font-size: 2rem;
                 color: variables.$primary;
                 font-family: 'Sansation', sans-serif;
+                transition: transform 0.3s ease-in-out;
             }
 
             .navbar-brand:hover {
                 color: variables.$primary-dark;
+                transform: scale(1.05);
             }
 
             ul {
@@ -43,18 +47,36 @@ body {
         }
     }
 
-    #main {
+    .whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+
+        img {
+            width: 60px;
+            height: 60px;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        img:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    .main {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
-        height: 95vh;
+        height: 100vh;
         gap: 20px;
         color: whitesmoke;
         background-image: linear-gradient(0deg,
-                rgba(0, 0, 0, 0.7),
-                rgba(0, 0, 0, 0.7)), url(../img/bg-main.png);
+                rgba(0, 0, 0, 0.3),
+                rgba(0, 0, 0, 0.5)), url(../img/main-bg.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
@@ -65,14 +87,19 @@ body {
             font-weight: bold;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
 
-            @media (max-width: 768px) {
+            @include bp.tablet {
                 font-size: 3.5rem;
+                margin: 10px;
+            }
+
+            @include bp.mobile {
+                font-size: 2.5rem;
                 margin: 10px;
             }
         }
     }
 
-    #somos-academy {
+    .somos-academy {
         background-color: variables.$bg-light;
         height: 100vh;
         display: flex;
@@ -92,8 +119,9 @@ body {
                 height: 500px;
                 width: 400px;
 
-                @media (max-width: 960px) {
+                @include bp.tablet {
                     display: none;
+                    ;
                 }
             }
 
@@ -108,10 +136,10 @@ body {
                     color: variables.$primary;
                 }
 
-                p{
+                p {
                     font-size: 1.25rem;
 
-                    @media (max-width: 960px) {
+                    @include bp.mobile {
                         text-align: center;
                         font-size: 1rem;
                     }
@@ -121,16 +149,16 @@ body {
                 text-align: initial;
                 padding: 0px 40px;
 
-                @media (max-width: 960px) {
-                    width: 100%;
-                    padding: 30px;
+                @include bp.tablet {
+                    width: 70%;
+                    padding: 30px 10px;
                     text-align: center;
                 }
             }
         }
     }
 
-    #somos-ofrecemos {
+    .somos-ofrecemos {
         background-color: variables.$bg-dark;
         height: 100vh;
         display: flex;
@@ -148,31 +176,32 @@ body {
                 color: whitesmoke;
                 font-size: 1.25rem;
 
-                @media (max-width: 960px) {
-                    width: 100%;
+                @include bp.tablet {
+                    width: 70%;
                     padding: 30px;
                     text-align: center;
+                }
+
+                @include bp.mobile {
                     font-size: 1rem;
                 }
             }
 
             .ofrecemos-img {
-                background-image: linear-gradient(0deg,
-                        rgba(0, 0, 0, 0.2),
-                        rgba(0, 0, 0, 0.2)), url(../img/pkm-Academy-img.png);
+                background-image: url(../img/poke-ball.png);
                 background-size: cover;
                 background-position: center center;
                 height: 500px;
-                width: 400px;
+                width: 500px;
 
-                @media (max-width: 960px) {
+                @include bp.tablet {
                     display: none;
                 }
             }
         }
     }
 
-    #nuestros-programas {
+    .nuestros-programas {
         background-color: variables.$bg-dark;
         color: white;
         text-align: center;
@@ -182,7 +211,7 @@ body {
         display: flex;
         flex-direction: column;
 
-        @media (max-width: 960px) {
+        @include bp.tablet {
             height: auto;
         }
 
@@ -198,7 +227,7 @@ body {
             justify-content: space-evenly;
             align-items: center;
 
-            @media (max-width: 960px) {
+            @include bp.tablet {
                 flex-direction: column;
                 align-items: center;
             }
@@ -218,7 +247,7 @@ body {
                     p {
                         font-size: 1rem;
 
-                        @media (max-width: 960px) {
+                        @include bp.tablet {
                             display: none;
                         }
                     }
@@ -247,7 +276,7 @@ body {
         }
     }
 
-    #ready {
+    .ready {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -263,14 +292,14 @@ body {
             color: whitesmoke;
             font-weight: bold;
 
-            @media (max-width: 768px) {
+            @include bp.mobile {
                 font-size: 2.5rem;
                 margin: 20px;
             }
         }
     }
 
-    #ready-somos {
+    .ready-somos {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -286,10 +315,11 @@ body {
             color: black;
             font-weight: bold;
 
-            @media (max-width: 768px) {
+            @include bp.mobile {
                 font-size: 2.5rem;
                 margin: 20px;
             }
+
         }
     }
 
@@ -307,10 +337,11 @@ body {
                 padding: 10px 10px;
             }
 
-            @media (max-width: 768px) {
+            @include bp.mobile {
                 height: auto;
                 align-items: center;
             }
         }
     }
+
 }
