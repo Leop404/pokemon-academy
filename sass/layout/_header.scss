@@ -1,0 +1,67 @@
+@use '../base/mediaqueries' as bp;
+@use '../base/variables';
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+
+    .navbar {
+        background-color: rgba(255, 255, 255, 0.95);
+        height: 60px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        transition: box-shadow 0.3s ease-in-out;
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 2rem;
+            color: variables.$primary;
+            font-family: 'Sansation', sans-serif;
+        }
+
+        .navbar-brand:hover {
+            color: variables.$primary-dark;
+        }
+
+        @include bp.tablet {
+            .navbar-collapse {
+                background-color: rgba(255, 255, 255, 0.95);
+                padding: 10px;
+                border-radius: 0 0 8px 8px;
+            }
+
+            .navbar-collapse .navbar-nav {
+                text-align: center;
+                width: 100%;
+            }
+
+            .navbar-collapse .nav-item {
+                display: block;
+                margin: 0.5rem 0;
+            }
+
+            .navbar-collapse .nav-link {
+                display: inline-block;
+                width: auto;
+                padding: 0.75rem 1rem;
+                text-align: center;
+            }
+        }
+
+        ul {
+            list-style: none;
+
+            .nav-link {
+                font-family: 'Roboto', sans-serif;
+                font-size: 1.25rem;
+                color: rgba(160, 20, 25, 0.8);
+            }
+
+            .nav-link:hover {
+                color: variables.$primary;
+                font-weight: bold;
+            }
+        }
+    }
+}

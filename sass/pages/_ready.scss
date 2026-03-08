@@ -1,0 +1,49 @@
+@use '../base/mediaqueries' as bp;
+@use '../base/variables';
+
+.ready {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 95vh;
+    background-color: variables.$bg-dark;
+    gap: 100px;
+
+    h2 {
+        font-family: 'Sansation', sans-serif;
+        font-size: 4rem;
+        color: whitesmoke;
+        font-weight: bold;
+
+        @include bp.mobile {
+            font-size: 2.5rem;
+            margin: 20px;
+        }
+    }
+}
+
+.ready-somos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 95vh;
+    background-color: variables.$bg-light;
+    gap: 100px;
+
+    h2 {
+        font-family: 'Sansation', sans-serif;
+        font-size: 4rem;
+        color: black;
+        font-weight: bold;
+
+        @include bp.mobile {
+            font-size: 2.5rem;
+            margin: 20px;
+        }
+
+    }
+}

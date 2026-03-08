@@ -1,0 +1,104 @@
+@use '../base/mediaqueries' as bp;
+@use '../base/variables';
+
+.somos-academy {
+    background-color: variables.$bg-light;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    .container-academy {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .img-container {
+            background-image: linear-gradient(0deg,
+                    rgba(0, 0, 0, 0.1),
+                    rgba(0, 0, 0, 0.1)), url(../img/play-pkm-img.png);
+            background-size: cover;
+            background-position: center center;
+            height: 500px;
+            width: 400px;
+
+            @include bp.tablet {
+                display: none;
+                ;
+            }
+        }
+
+        .academy-texto {
+            h2 {
+                font-family: 'Sansation', sans-serif;
+                font-size: 3rem;
+                font-weight: bold;
+            }
+
+            .color-somos {
+                color: variables.$primary;
+            }
+
+            p {
+                font-size: 1.25rem;
+
+                @include bp.mobile {
+                    text-align: center;
+                    font-size: 1rem;
+                }
+            }
+
+            width: 50%;
+            text-align: initial;
+            padding: 0px 40px;
+
+            @include bp.tablet {
+                width: 70%;
+                padding: 30px 10px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.somos-ofrecemos {
+    background-color: variables.$bg-dark;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    .container-ofrecemos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .ofrecemos-texto {
+            width: 50%;
+            text-align: initial;
+            padding: 0px 40px;
+            color: whitesmoke;
+            font-size: 1.25rem;
+
+            @include bp.tablet {
+                width: 70%;
+                padding: 30px;
+                text-align: center;
+            }
+
+            @include bp.mobile {
+                font-size: 1rem;
+            }
+        }
+
+        .ofrecemos-img {
+            background-image: url(../img/poke-ball.png);
+            background-size: cover;
+            background-position: center center;
+            height: 500px;
+            width: 500px;
+
+            @include bp.tablet {
+                display: none;
+            }
+        }
+    }
+}

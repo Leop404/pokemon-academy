@@ -1,0 +1,32 @@
+@use '../base/mediaqueries' as bp;
+@use '../base/variables';
+
+#caracteristicas {
+    .container-caracteristicas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 20px;
+        gap: 20px;
+        height: 100vh;
+        background-color: variables.$bg-light;
+
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 40px;
+            color: variables.$primary;
+            text-align: center;
+        }
+
+        ul {
+            list-style: circle;
+            font-size: 2rem;
+            color: black;
+
+            @include bp.mobile {
+                font-size: 2.5rem;
+            }
+        }
+    }
+}

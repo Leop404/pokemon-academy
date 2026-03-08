@@ -1,4 +1,5 @@
-@use 'mediaqueries' as bp;
+@use '../base/mediaqueries' as bp;
+@use '../base/variables';
 
 .btn-primary {
     font-size: 1.5rem;
@@ -9,17 +10,24 @@
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
     color: white;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    background-color: rgb(206, 24, 30);
+    background-color: variables.$primary;
     font-family: 'Roboto', sans-serif;
-                transition: box-shadow 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out;
 
     @include bp.tablet {
         font-size: 1.2rem;
         padding: 5px 15px;
     }
 }
+
 .btn-primary:hover {
-    background-color: rgb(160, 20, 25);
-    border-color: rgb(160, 20, 25);
-                    transform: scale(1.05);
+    background-color: variables.$primary;
+    border-color: variables.$primary;
+    transform: scale(1.05);
+}
+
+.btn-primary:active:focus {
+    background-color: variables.$primary-dark;
+    outline: none;
+    border-color: variables.$primary-dark;
 }

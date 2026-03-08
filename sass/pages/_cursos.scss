@@ -1,0 +1,134 @@
+@use '../base/mediaqueries' as bp;
+@use '../base/variables';
+
+.programa-page {
+    background-color: variables.$bg-dark;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    .programa-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .building-img {
+            background-image: linear-gradient(0deg,
+                    rgba(0, 0, 0, 0.1),
+                    rgba(0, 0, 0, 0.1)), url(../img/teambuild-img.png);
+            background-size: cover;
+            background-position: center center;
+            height: 400px;
+            width: 600px;
+
+            @include bp.tablet {
+                height: 200px;
+                width: 400px;
+                background-position: center center;
+            }
+
+            @include bp.mobile {
+                display: none;
+            }
+        }
+
+        .planning-img {
+            background-image: linear-gradient(0deg,
+                    rgba(0, 0, 0, 0.1),
+                    rgba(0, 0, 0, 0.1)), url(../img/planning-img.png);
+            background-size: cover;
+            background-position: center center;
+            height: 350px;
+            width: 550px;
+
+            @include bp.tablet {
+                height: 200px;
+                width: 400px;
+                background-position: center center;
+            }
+
+            @include bp.mobile {
+                display: none;
+            }
+        }
+
+        .tactics-img {
+            background-image: linear-gradient(0deg,
+                    rgba(0, 0, 0, 0.1),
+                    rgba(0, 0, 0, 0.1)), url(../img/tactics-img.png);
+            background-size: cover;
+            background-position: center center;
+            height: 400px;
+            width: 600px;
+
+            @include bp.tablet {
+                height: 200px;
+                width: 400px;
+                background-position: center center;
+            }
+
+            @include bp.mobile {
+                display: none;
+            }
+        }
+
+        .programa-texto {
+            color: whitesmoke;
+            width: 50%;
+            text-align: initial;
+            padding: 10px 40px;
+
+            @include bp.tablet {
+                width: 80%;
+                padding: 40px 10px;
+                text-align: center;
+            }
+
+            h2 {
+                font-family: 'Sansation', sans-serif;
+                font-size: 3rem;
+                font-weight: bold;
+            }
+
+            p {
+                color: rgba($color: whitesmoke, $alpha: 0.6);
+                font-size: 1.25rem;
+
+                @include bp.mobile {
+                    text-align: center;
+                    font-size: 1rem;
+                }
+            }
+
+            .nivelQ {
+                margin-top: 20px;
+                font-weight: bold;
+                font-size: 1.25rem;
+                color: whitesmoke;
+
+                @include bp.tablet {
+                    text-align: center;
+                    font-size: 1.25rem;
+                }
+
+                @include bp.mobile {
+                    text-align: center;
+                    font-size: 1rem;
+                }
+            }
+
+            .nivelA {
+                color: rgba($color: whitesmoke, $alpha: 0.6);
+                font-weight: normal;
+            }
+        }
+    }
+
+    @include bp.tablet {
+        .programa-content {
+            flex-direction: column;
+            padding-bottom: 100px;
+        }
+    }
+
+}

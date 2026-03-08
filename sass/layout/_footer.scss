@@ -1,0 +1,47 @@
+@use '../base/mediaqueries' as bp;
+@use '../base/variables';
+
+
+footer {
+    height: 150px;
+
+    .img-footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 10px;
+
+
+        img {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            opacity: 0.5;
+        }
+
+        img:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .container-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+            font-size: 1.25rem;
+            padding: 10px 10px;
+        }
+
+        @include bp.mobile {
+            height: auto;
+            align-items: center;
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@use '../base/mediaqueries' as bp;
+@use '../base/variables';
+
+.nuestros-programas {
+    background-color: variables.$bg-dark;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    gap: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    @include bp.tablet {
+        height: auto;
+    }
+
+    h2 {
+        font-family: 'Sansation', sans-serif;
+        font-size: 3rem;
+        font-weight: bold;
+        margin-top: 100px;
+    }
+
+    .container-card {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        @include bp.tablet {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card {
+            margin-top: 30px;
+            background-color: rgba(90, 30, 117, 0.2);
+            color: white;
+            border-radius: 20px;
+
+            .card-body {
+                h3 {
+                    font-weight: bold;
+                    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
+                    color: variables.$bg-light;
+                }
+
+                p {
+                    font-size: 1rem;
+                    color: rgba(variables.$bg-light, 0.8);
+
+                    @include bp.tablet {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
